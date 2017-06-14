@@ -1,0 +1,23 @@
+<import src="../template/store-template/store-template.wxml" />
+<import src="../template/store-modal/store-modal.wxml" />
+<view class="search">
+    <icon type="search" class="search-img" size="13" color="#405f80"></icon>
+    <icon type="cancel" class="search-xx" size="18" color="#405f80" wx:if="{{searchPanelShow}}" bindtap="onCancelTap"></icon>
+    <input type="text" value="{{userInput}}" placeholder="搜索商家或地址" placeholder-class="placeholder" bindfocus="onBindFocus" bindconfirm="onBindConfirm" focus="{{true}}"/>
+</view>
+
+<view class="store" wx:if="{{searchResult}}">
+    <template is="storeTemplate" data="{{...searchList}}" />
+</view>
+<view class="store" wx:else>
+  <view class="noResult">你好，没有相关商家店铺</view>
+</view>
+
+
+
+
+
+<view class="{{hidden?'hidden':''}}" catchtap="hiddenTap">
+    <template is="storeModalTemplate" data="{{...discountModal}}" />
+</view>
+

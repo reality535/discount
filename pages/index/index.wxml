@@ -1,0 +1,33 @@
+<import src="../template/store-template/store-template.wxml" />
+<import src="../template/store-modal/store-modal.wxml" />
+<view class="page {{isScroll ? '':'stopScroll'}}">
+  <view class="bg">
+    <view class="position">
+      <image src="../../images/location.png" class="loc-ico" />
+      <text bindtap="navigateToSearch">{{address}}</text> 
+    </view>
+    
+    <button class="search-btn" bindtap="toSearchStore" hover-class="btn_bg"> 
+      <icon type="search" size="14" color="#d1d1d1"></icon>
+      <text>搜索商家或地址</text>
+    </button>
+    <view class="navbar">
+      <view class="nav-item"wx:for="{{navbar}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="swichNav">
+        <view>{{item}}</view>
+        <view class="triangle" wx:if="{{idx == currentNavbar}}"></view>
+      </view>
+      
+    
+    </view>
+  </view>
+
+
+  <view class="store">
+      <template is="storeTemplate" data="{{...storeList}}" />
+  </view>
+
+  <view class="{{hidden?'hidden':''}}" catchtap="hiddenTap">
+      <template is="storeModalTemplate" data="{{...discountModal}}" />
+  </view>
+</view>
+

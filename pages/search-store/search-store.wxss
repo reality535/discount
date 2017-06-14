@@ -1,0 +1,50 @@
+@import "../template/store-template/store-template.wxss";
+@import "../template/store-modal/store-modal.wxss";
+.search {
+  background-color: #0176c3;
+  height: 60rpx;
+  width: 100%;
+  position: relative;
+  padding: 20rpx 0; 
+}
+
+.search-img {
+  height: 26rpx;
+  width: 26rpx;
+  position: absolute;
+  margin-top: -13rpx;
+  top: 50%;
+  left: 60rpx;
+  z-index: 10;
+}
+
+.search input {
+  height: 60rpx;
+  width: 82%;
+  margin: 0 auto;
+  font-size: 28rpx;
+  border-radius: 30rpx;
+  background: #fff;
+  padding-left:70rpx; 
+
+}
+
+.placeholder {
+  font-size: 14px;
+
+  margin-left: 0rpx;
+}
+.search-xx{
+  position:absolute;
+  margin-top:-18rpx;
+  top:50%;
+  right:60rpx;
+  z-index:10;
+
+}
+
+.noResult{
+  padding: 60rpx 40rpx;
+  font-size: 28rpx;
+  text-align: center;
+}

@@ -1,0 +1,93 @@
+.loc-ico_1{
+  width: 32rpx;
+  height: 32rpx;
+}
+image {
+	width: 60px;
+	height: 60px;
+}
+
+.store-item{
+  display: flex;
+  font-size: 28rpx;
+  padding: 38rpx 20rpx;
+  flex-wrap:nowrap;
+  border-bottom: 1rpx solid #efefef;
+}
+.header{
+  border-bottom: 1rpx solid #efefef;
+}
+.title{
+  line-height: 34rpx;
+  display: flex;
+  align-items: center;
+}
+.title-name{
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #000;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width:86%;
+}
+.store-tag{
+  font-size: 20rpx;
+  padding: 0rpx 8rpx;
+  margin-right: 10rpx;
+  color: #52250a;
+  background: #ffe142;
+  line-height: 28rpx;
+  border-radius: 4rpx;
+  font-weight: bold;
+}
+.thumb image{
+  width: 150rpx;
+  height: 120rpx;
+  border-radius: 8rpx;
+}
+.section{
+  margin-left: 20rpx;
+  width:544rpx;
+}
+.address{
+  color: #999;
+  padding: 10rpx 0 6rpx 0;
+  margin-top: 6rpx;
+  display: flex;
+	justify-content: flex-start;
+  align-items: center;
+  font-size: 24rpx;
+}
+.address .addr_detail{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.discount{
+  padding: 20rpx 0;
+  color: #747474;
+}
+.discount-item{
+  line-height: 50rpx;
+  display: flex;
+  align-items: center;
+}
+.discount-item image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.dis-wid{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.tag{
+  display: flex;
+  justify-content: space-between;
+  color: #999;
+  font-size: 22rpx;
+  line-height:30rpx;
+  margin: 4rpx 0 8rpx 0;
+}

@@ -1,0 +1,83 @@
+@import "../template/store-template/store-template.wxss";
+@import "../template/store-modal/store-modal.wxss";
+.bg{
+  background: #0176c3;
+  padding: 0 0 10rpx 0;
+}
+.store{
+  margin-top: 20rpx;
+}
+.stopScroll{
+  height: 100%;
+  overflow-y: hidden;
+}
+/*分类*/
+.navbar{
+  display: flex;
+  justify-content: center;
+  line-height: 44rpx;
+  margin-top:20rpx;
+  /*border-bottom: 1rpx solid #d1d1d1;*/
+}
+.navbar .nav-item{
+  width:33%;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  position: relative;
+}
+.nav-item:nth-child(2){
+  border-left: 1rpx solid #d0d3d5;
+  border-right:  1rpx solid #d0d3d5;
+}
+.nav-item view{
+  color: #fff;
+  line-height: 60rpx;
+}
+.triangle{
+  display:block; 
+  width:0; 
+  height:0; 
+  border-width:0 10rpx 10rpx; 
+  border-style:solid; 
+  border-color:transparent transparent #fff; 
+  position:absolute; 
+  left:50%;/* 三角形居中显示 */
+  margin-left:-10rpx;/* 三角形居中显示 */
+}
+/*定位*/
+.position {
+	display: flex;
+	justify-content: flex-start;
+	padding: 20rpx;
+	align-items: center;
+  font-size: 16px;
+	color: white;
+}
+.position text{
+  color: #fff;
+}
+.loc-ico{
+  width: 30px;
+	height: 30px;
+}
+
+/*搜索按键*/
+.search-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26rpx;
+  color: #d1d1d1;height: 60rpx;
+  border-radius: 30rpx;
+  width:92%;
+  margin: 0 auto;
+  background: #fff;
+}
+.search-btn text{
+  color:#d1d1d1;
+}
+.btn_bg{
+  background: #efefef;
+}
+

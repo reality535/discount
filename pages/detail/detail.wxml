@@ -1,0 +1,3 @@
+<view class="" wx:for="{{disCountList}}">
+  <view class="">{{item.d_3}}</view>
+</view>

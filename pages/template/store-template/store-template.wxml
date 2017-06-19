@@ -1,5 +1,5 @@
 <template name="storeTemplate">
-  <view class="store-item" wx:for="{{list}}">
+  <view class="store-item" wx:for="{{list}}" data-idx="{{index}}" catchtap="toDetailPage">
     <view class="thumb">
       <image src="{{item.thumb}}"></image>
     </view>
@@ -8,7 +8,6 @@
         <view class="title">
           <text class="store-tag" wx:if="{{item.d_attr != 0}}">{{item.d_attr}}</text>
           <view class="title-name">{{item.title}}</view>
-          <!--<text class="title-name">{{item.title}}</text>-->
         </view>
         
         <view class="address">
@@ -24,10 +23,10 @@
         </view>
       </view>
       <view class="discount">
-        <view wx:if="{{item.discount}}" class="discount-item" wx:for="{{item.discount}}" wx:for-item="item1" catchtap="toDetailTap" data-store="{{item.title}}" data-discount="{{item.discount[index].d_6}}" data-start="{{item.discount[index].d_4}}" data-end="{{item.discount[index].d_5}}">
+        <view wx:if="{{item.discount}}" class="discount-item" wx:for="{{item.discount}}" wx:for-item="item1">
             <image src="/images/icon/yhicon{{item1.d_2}}.gif"></image>
             <view class="dis-wid">{{item1.d_3}}</view>
-            
+            <view class="store-tag1" wx:if="{{item1.d_7 == 0}}">未开始</view>
         </view>
       </view>     
     </view>    

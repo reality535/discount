@@ -14,7 +14,8 @@ Page({
     detail_store: '',
     detail_discount:null,
     discountModal:{},
-    isScroll:true
+    isScroll:true,
+    aa:"jfkdjfkd\nfjed"
     
   },
 
@@ -22,7 +23,7 @@ Page({
     var that = this;
     that.reloadCurrent();
     WxNotificationCenter.addNotification("addressSelectedNotification", that.getAddress, that);
-   
+    
   },
   // 下拉刷新
   onPullDownRefresh: function () {
@@ -108,32 +109,21 @@ Page({
             storeList: []
           })
         }
+
+        app.globalData.discount = res.data
       }
       
     })
   },
   
-  toDetailTap:function(event){
-    console.log(event);
+  // 前往详情页
+  toDetailPage:function(e){
+    console.log(e);
+    var id = e.currentTarget.dataset.idx;
     var that = this;
-    that.setData({
-      hidden:!that.data.hidden,
-      isScroll:false
-    })
-
-    var detail_discount = event.currentTarget.dataset.discount;
-    var detail_store = event.currentTarget.dataset.store;
-    var detail_start = event.currentTarget.dataset.start;
-    var detail_end = event.currentTarget.dataset.end;
-    var discountModal = {
-      detail_discount: detail_discount,
-      detail_store: detail_store,
-      detail_start: detail_start,
-      detail_end: detail_end
-    };
-    that.setData({
-      discountModal: discountModal
-    })
+    wx.navigateTo({
+      url: '../detail/detail?type=store&id=' + id
+    });
   },
   // 前往搜索页
   toSearchStore: function () {

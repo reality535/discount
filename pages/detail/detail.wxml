@@ -1,3 +1,48 @@
-<view class="" wx:for="{{disCountList}}">
-  <view class="">{{item.d_3}}</view>
+<view class="store-contact">
+  <view class="title">
+    <image class="thumb" src="{{storeDiscount.thumb}}"></image>
+    <view class="tit">
+      <view class="tit_0">
+        <text class="store-tag" wx:if="{{storeDiscount.d_attr != 0}}">{{storeDiscount.d_attr}}</text>
+        <view class="tit_1">{{storeDiscount.title}}</view>
+      </view>
+      <view class="tit_tag"><text>{{storeDiscount.d_tag}}</text><text>{{storeDiscount.oDistance}}</text></view>
+      <view class="address" data-address="{{storeDiscount.d_map}}" data-title="{{storeDiscount.title}}" bindtap="toMapTap">
+          <image src="../../images/location_1.png" class="loc-ico_1" />
+          <view class="addr_detail">{{storeDiscount.d_addr}}</view>
+          <image src="../../images/gps.png" class="loc-ico_1" />
+      </view>
+      <view class="phone">
+          <image src="../../images/phone.png" class="loc-ico_1" />
+          <view class="num">{{storeDiscount.d_tel}}</view>
+      </view>
+      
+    </view>
+  </view>
 </view>
+
+<view class="youhui" wx:for="{{storeDiscount.discount}}">
+  <view class="yh_text">
+    <view class="yh_title">
+      <image src="/images/icon/yhicon{{item.d_2}}.gif"></image>
+      <view class="dis-wid">{{item.d_3}}</view>
+      <view class="store-tag1" wx:if="{{item.d_7 == 0}}">未开始</view>
+    </view>
+    <view class="yh_date">
+      活动时间：{{item.d_4}}至{{item.d_5}}
+    </view>
+  </view>
+  <view class="content {{stateArr[index]?'show':'hide'}}">
+    <text>{{item.d_6}}</text>
+  </view>
+
+  <view class="up-down" bindtap="upDownTap" data-itemIdx="{{index}}">
+    <image wx:if="{{stateArr[index]}}" src="../../images/up.png"></image>
+    <image wx:else src="../../images/down.png"></image>
+  </view>
+  
+</view>
+
+
+
+

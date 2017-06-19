@@ -1,1 +1,139 @@
-/* detail.wxss */
+page{
+  background: #efeff4;
+  /*height: 100%;*/
+}
+view{
+  background: #fff;
+}
+.store-tag1{
+  font-size: 20rpx;
+  padding: 0rpx 8rpx;
+  margin-left: 10rpx;
+  color: #ff2244;
+  background: #fff;
+  line-height: 28rpx;
+  border: 1rpx solid #ff2244;
+  border-radius: 4rpx;
+  font-weight: bold;
+}
+.store-tag{
+  font-size: 20rpx;
+  padding: 0rpx 8rpx;
+  margin-right: 10rpx;
+  color: #52250a;
+  background: #ffe142;
+  line-height: 28rpx;
+  border-radius: 4rpx;
+  font-weight: bold;
+}
+.title{
+  color: #333;
+  margin: 20rpx 0;
+  display: flex;
+}
+.thumb{
+  width: 200rpx;
+  height: 160rpx;
+}
+.tit{
+  margin-left:20rpx;
+}
+.tit_0{
+  display: flex;
+  align-items: center;
+  margin-bottom:10rpx;
+}
+.tit_1{
+  color: #333;
+  font-weight: bold;
+}
+
+.tit_tag{
+  font-size: 24rpx;
+  color: #666;
+  margin: 8rpx 0 18rpx 10rpx;
+  display: flex;
+  justify-content: space-between;
+  }
+.loc-ico_1{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 6rpx;
+}
+.address,.phone{
+  color: #999;
+  /*padding: 10rpx 0 6rpx 0;*/
+  /*margin-top: 6rpx;*/
+  display: flex;
+	/*justify-content: flex-start;*/
+  /*align-items: center;*/
+  font-size: 24rpx;
+}
+.phone{
+  margin-top: 6rpx;
+}
+.address view,.phone view{
+  color: #555;
+  width: 400rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+
+}
+.num{
+  line-height: 32rpx;
+}
+.store-contact{
+  padding:20rpx 40rpx;
+}
+.youhui{
+  padding: 20rpx 40rpx;
+  margin-top:30rpx;
+}
+.yh_text{
+  border-bottom: 1rpx solid #eee;
+  padding-bottom: 10rpx;
+}
+.yh_title{
+  display: flex;
+  align-items: center;
+  line-height: 60rpx;
+}
+.dis-wid{
+  color: #333;
+}
+.yh_title image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.yh_date{
+  font-size: 24rpx;
+  padding-left: 30rpx;
+  color: #999;
+}
+.content{
+  font-size: 24rpx;
+  line-height: 44rpx;
+  margin: 20rpx 0;
+  padding:0 20rpx;
+}
+.hide{
+  height: 88rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.show{
+  height: auto;
+}
+.up-down{
+  padding: 10rpx 0;
+}
+.up-down image{
+  width:50rpx;
+  height: 27rpx;
+  display: block;
+  margin: 0 auto;
+}

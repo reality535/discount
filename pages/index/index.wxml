@@ -16,8 +16,6 @@
         <view>{{item}}</view>
         <view class="triangle" wx:if="{{idx == currentNavbar}}"></view>
       </view>
-      
-    
     </view>
   </view>
 

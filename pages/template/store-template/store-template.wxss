@@ -41,6 +41,17 @@ image {
   border-radius: 4rpx;
   font-weight: bold;
 }
+.store-tag1{
+  font-size: 20rpx;
+  padding: 0rpx 8rpx;
+  margin-left: 10rpx;
+  color: #ff2244;
+  background: #fff;
+  line-height: 28rpx;
+  border: 1rpx solid #ff2244;
+  border-radius: 4rpx;
+  font-weight: bold;
+}
 .thumb image{
   width: 150rpx;
   height: 120rpx;
@@ -79,6 +90,7 @@ image {
   margin-right: 10rpx;
 }
 .dis-wid{
+  max-width: 400rpx;
   overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;

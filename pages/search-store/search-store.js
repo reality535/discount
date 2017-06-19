@@ -1,7 +1,6 @@
 // search-store.js
+var app = getApp();
 Page({
-
-
   data: {
     lat: 30.746129,
     lng:120.755486,
@@ -41,26 +40,35 @@ Page({
     })
 
   },
-  toDetailTap: function (event) {
-    console.log(event);
-    var that = this;
-    that.setData({
-      hidden: !that.data.hidden
-    })
+  // toDetailTap: function (event) {
+  //   console.log(event);
+  //   var that = this;
+  //   that.setData({
+  //     hidden: !that.data.hidden
+  //   })
 
-    var detail_discount = event.currentTarget.dataset.discount;
-    var detail_store = event.currentTarget.dataset.store;
-    var detail_start = event.currentTarget.dataset.start;
-    var detail_end = event.currentTarget.dataset.end;
-    var discountModal = {
-      detail_discount: detail_discount,
-      detail_store: detail_store,
-      detail_start: detail_start,
-      detail_end: detail_end
-    };
-    that.setData({
-      discountModal: discountModal
-    })
+  //   var detail_discount = event.currentTarget.dataset.discount;
+  //   var detail_store = event.currentTarget.dataset.store;
+  //   var detail_start = event.currentTarget.dataset.start;
+  //   var detail_end = event.currentTarget.dataset.end;
+  //   var discountModal = {
+  //     detail_discount: detail_discount,
+  //     detail_store: detail_store,
+  //     detail_start: detail_start,
+  //     detail_end: detail_end
+  //   };
+  //   that.setData({
+  //     discountModal: discountModal
+  //   })
+  // },
+  // 前往详情页
+  toDetailPage: function (e) {
+    console.log(e);
+    var id = e.currentTarget.dataset.idx;
+    var that = this;
+    wx.navigateTo({
+      url: '../detail/detail?type=search&id=' + id
+    });
   },
   // 搜索数据
   searchData: function (lat, lng, s) {
@@ -92,6 +100,7 @@ Page({
             searchResult: false
           })
         }
+        app.globalData.searchDiscount = res.data
       }
     })
   },
